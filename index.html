@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Christian White</title>
+	<link defer rel="stylesheet" type="text/css" href="style.css" />
+	<script defer src="showcase-js.js"></script>
+</head>
+
+
+
+<body> 
+<!-- menu bar at the top  -->
+<header>
+	<div class="nav">
+		<a href=""><img src="" width="20px"></a>
+
+		<span style="cursor:pointer" class="openbtn" onclick="openNav()"><a>&#9776;</a></span>
+		
+
+		<div class="right">
+			<h2>Christian White</h2>
+
+		</div>
+	</div>
+</header>
+
+<div id="share-success">
+	<p id="result"></p>
+</div>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a onclick="myProjects();">Showcase</a>
+	<a onclick="showProject1();">Project - QR Code</a>
+	<a onclick="showProject2();">Project - Data Analysis</a>
+	<a onclick="showProject3();">Project - Web API</a>
+	<!--<a onclick="showProject4();">Project 4</a>-->
+
+</div>
+
+<div id="myProjects">	
+	<div style="margin: 50px;">
+	</div>
+
+	<div id="container" class="cols">
+
+		<div class="box">
+			<div class="col-container">
+				<h2>Showcase</h2>
+				<div class="column-half">
+					<div class="project-feature" onclick="showProject1();">
+						<img src="poster1small.png">
+					</div>
+					<p>QR Code</p>
+				</div>
+				
+				<div class="column-half">
+					<div class="project-feature" onclick="showProject2();">
+						<img src="CumulativeDist.png">
+					</div>
+					<p>Data Analysis</p>
+				</div>
+				
+				<br>
+					
+					<div class="column-span">
+						<div class="project-feature" onclick="showProject3();">
+							<img src="NETCore-img.png">
+						</div>
+						<p>Web API</p>
+
+					</div>
+
+					<!--
+					<div class="column-half">
+						<div class="project-feature" onclick="showProject4();">
+							<img src="folder.png">
+						</div>
+						<p>Project 4</p>
+					</div>-->
+					<a style= "color: #fff; cursor: default">.	</a>	
+				</div>
+			</div>
+	</div>
+</div>
+
+<div id="showProject1">
+
+	<div id="container" class="cols">
+		<div class="box">
+			<div class="col-container">
+				<h2>QR Code</h2>
+				<!-- Slideshow container -->
+				<div class="slideshow-container">
+
+					<!-- Full-width images with number and caption text -->
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 6</div>
+						<img src="bloomfield.png" style="width:100%">
+						<div class="text">QR code before identification</div>
+					</div>
+				
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 6</div>
+						<img src="bloomfield-pixel-array.PNG" style="width:100%">
+						<div class="text">QR code after being greyscaled</div>
+					</div>
+				
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 6</div>
+						<img src="bloomfield-greyscaled.PNG" style="width:100%">
+						<div class="text">QR code after pixel dilation and pixel erosion </div>
+					</div>
+
+					
+					<div class="mySlides fade">
+						<div class="numbertext">4 / 6</div>
+						<img src="bloomfield-black-white.PNG" style="width:100%">
+						<div class="text">QR code after identifying largest cluster of white pixels</div>
+					</div>
+					
+					
+					<div class="mySlides fade">
+						<div class="numbertext">5 / 6</div>
+						<img src="bloomfield-green-box.PNG" style="width:100%">
+						<div class="text">QR code with box points at the minimum and maximum points of the white pixels</div>
+					</div>
+
+
+					<div class="mySlides fade">
+						<div class="numbertext">6 / 6</div>
+						<img src="bloomfield-after.png" style="width:100%">
+						<div class="text">QR code with identification</div>
+					</div>
+				
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+				
+				<!-- The dots/circles -->
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(6)"></span>
+				</div>
+				I created a python software that detects QR codes in images, a technology that is used daily 
+				when scanning QR codes with the COVID19 tracer app. The steps I did to achieve this
+				result can be seen in the above example images.
+				<br><br><a class="code-link" href="https://github.com/ChristianJWhite/QR_Code/blob/main/QR%20Code%20Detector/QRCodeDetection.py">View code</a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+<div id="showProject2">
+	<div id="container" class="cols">
+		<div class="box">
+			<div class="col-container">
+			<h2>Data Analysis</h2>
+					<div class="featurette-half">
+						<p class="left-sided">
+							I created a python program that would analyse over 700,000 web server access logs for the University of Calgary.
+							The server access logs contatined information about all the requests made to the server and the corresponding server responses.
+							The access logs were formated in the Common Log Format: <li>hostname - - [dd/mm/yyyy:hh:mm:ss time_zone] object response_code transfer_size</li>
+						</p>
+						<br><br><a class="code-link" href="https://github.com/ChristianJWhite/Clagary_University/blob/main/Calgary_University.py">View code</a>
+					</div>
+					<div class="featurette-half">
+						<div class="polaroid">
+							<img src="data-snippet.PNG">
+							<div class="polar-container">
+							<p>Snippet of data in its raw form</p>
+							</div>
+						</div>
+					</div>
+			</div>
+
+
+			<div class="row featurette">
+				<h2 class="featurette-heading">Inferring Data</h2>
+				<div class="featurette-half">
+					<p class="left-sided">
+						With the python program I was able to extract the code onto MS Excel and create graphs displaying the nature of the web server access logs.
+						With these graphs and findings I was able to infer aspects of the web server that are present and improvements that could be worked on in the future.
+						<br><br>
+						For example this CDF graph shows that files with sizes between and around 1,000 to 10,000 bytes are more
+						frequently requested compared to the very large and very small files. This implies that for a more efficient system,
+						these files shoud be prioritised.
+					</p>
+				</div>
+				<div class="featurette-half">
+					<div class="polaroid">
+						<img src="CumulativeDist.png">
+						<div class="polar-container">
+						<p>Cumulative Distribution Function plot of the transfer sizes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				
+				<div class="featurette-half">
+					<p class="left-sided">
+						This graph shows the user traffic for the web server over a 1 year period in terms of requests made.
+					</p>
+				</div>
+				<div class="featurette-half">
+					<div class="polaroid">
+						<img src="total-requests-percent.PNG">
+						<div class="polar-container">
+						<p>Bar graph of the percentages of total requests by month</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a style= "color: #fff; cursor: default">.	</a>
+			
+
+			<hr class="featurette-divider">
+		</div>
+	</div>
+</div>
+
+
+<div id="showProject3">
+	<div id="container" class="cols">
+		<div class="box">
+			<div class="col-container">
+				<h2>Web API</h2>
+				<div class="featurette-half">
+					<p class="left-sided">
+						The aim of the project that I wanted to achieve was to use C# to create endpoints for a basic web API program.
+						The web API was created using ASP.NET Core and included datasets from a fake university that were stored in CSV files.
+						I used a code-first approach of Microsoft's entity framework to create the database and then transferred the datasets from the CSV files into the database using SQLite studio.
+						From there I then wrote the code for my web API and implemented several endpoints.
+						I then used Postman as a means to check my results.
+					</p>
+				<br><br><a class="code-link" href="https://github.com/ChristianJWhite/Web_API_Southern_Tech/blob/main/Controller">View endpoints</a>
+				</div>
+				<div class="featurette-half">
+					<div class="polaroid">
+						<img src="database-img.PNG">
+						<div class="polar-container">
+						<p>SQLite Database</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-container">
+				<div class="featurette-half">
+					<div class="polaroid">
+						<img src="get-staff-img.PNG"">
+						<div class="polar-container">
+						<p>Endpoint that GET methods all staff information from the database</p>
+						</div>
+					</div>
+				</div>
+				<div class="featurette-half">
+					<div class="polaroid">
+						<img src="POST-comment-img.PNG">
+						<div class="polar-container">
+						<p>Endpoint that uses POST method to post comments into the database</p>
+						</div>
+					</div>
+				</div>
+				<a style= "color: #fff; cursor: default">.	</a>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+
+
+  
+<footer>
+	<p>christian.white@outlook.co.nz </p>
+</footer>
+
+</body>
+</html>
