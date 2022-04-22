@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Christian White</title>
+    <title >Christian White</title>
 	<link defer rel="stylesheet" type="text/css" href="style.css" />
 	<script defer src="showcase-js.js"></script>
 </head>
@@ -36,7 +36,7 @@
 	<a onclick="showProject1();">Project - QR Code</a>
 	<a onclick="showProject2();">Project - Data Analysis</a>
 	<a onclick="showProject3();">Project - Web API</a>
-	<!--<a onclick="showProject4();">Project 4</a>-->
+	<a onclick="showProject4();">Project - JavaScript Game</a>
 
 </div>
 
@@ -44,6 +44,7 @@
 	<div style="margin: 50px;">
 	</div>
 
+	<!-- main page with project buttons -->
 	<div id="container" class="cols">
 
 		<div class="box">
@@ -53,39 +54,40 @@
 					<div class="project-feature" onclick="showProject1();">
 						<img src="poster1small.png">
 					</div>
-					<p>QR Code</p>
+					<p class="p1">QR Code</p>
 				</div>
 				
+
 				<div class="column-half">
-					<div class="project-feature" onclick="showProject2();">
+					<div class="project-feature-2" onclick="showProject2();">
 						<img src="CumulativeDist.png">
 					</div>
-					<p>Data Analysis</p>
+					<p class="p1">Data Analysis</p>
 				</div>
 				
-				<br>
 					
-					<div class="column-span">
-						<div class="project-feature" onclick="showProject3();">
-							<img src="NETCore-img.png">
-						</div>
-						<p>Web API</p>
-
+				<div class="column-half">
+					<div class="project-feature" onclick="showProject3();">
+						<img src="NETCore-img.png">
 					</div>
+					<p class="p1"> Web API</p>
 
-					<!--
-					<div class="column-half">
-						<div class="project-feature" onclick="showProject4();">
-							<img src="folder.png">
-						</div>
-						<p>Project 4</p>
-					</div>-->
+				</div>
+
+
+				<div class="column-half">
+					<div class="project-feature-2" onclick="showProject4();">
+						<img src="Game_pic_1.PNG">
+					</div>
+					<p class="p1">JavaScript Game</p>
+				</div>
 					<a style= "color: #fff; cursor: default">.	</a>	
 				</div>
 			</div>
 	</div>
 </div>
 
+<!-- Project 1 Webpage -->
 <div id="showProject1">
 
 	<div id="container" class="cols">
@@ -150,9 +152,33 @@
 					<span class="dot" onclick="currentSlide(5)"></span>
 					<span class="dot" onclick="currentSlide(6)"></span>
 				</div>
-				I created a python software that detects QR codes in images, a technology that is used daily 
-				when scanning QR codes with the COVID19 tracer app. The steps I did to achieve this
-				result can be seen in the above example images.
+				<br>
+				<p style="margin-left: 10px; margin-right: 10px; text-align:left">
+					I created a python software that detects QR codes in images, a technology that is used daily 
+					when scanning QR codes with the COVID19 tracer app. The steps I did to achieve this
+					result can be seen in the above example images.
+
+					In order to create the QR code detector the program would read in the png file, and receive three pixel arrays for red, 
+					green and blue components, respectively. Each pixel array contains 8 bit integer values between 0 and 255 
+					encoding the color values. Afterwards it would convert the rgb values to greyscale using the formula
+					g= 0.299*r + 0.587*g + 0.114*b, where g is the greyscale value. The program would then call the scaleTo0And255AndQuantize
+					function which computes a contrast stretching from the minimum and maximum values of the input pixel array to the full 8 
+					bit range of values between 0 and 255, allowing for a better contrast between black and white pixels. 
+					<br><br>
+					After calculating the minimum and maximum values of the pixel array all of the vertical and horizontal edges within the image are calculated
+					using a 3x3 Sobel filter. Afterwards a 3x3 mean filter is applied over the image 8 times to smooth out the pixels within
+					the image after all of the conversions. Afterwards the computeThresholdGE function is called which computes and returns a 
+					binary image with values either 0 or 255. If the input pixel is smaller than the threshold value, the result pixel is 0, 
+					if it is greater or equal to the threshold value it is 255. 
+					<br><br>
+					Afterwards the image is processed 5 times with an image dilation of the image and an image erosion of the image. This allows for 
+					the binary representation of an image to be simplified while also preserving its shape. It also allows for the removal of any 
+					unnecessary pixels in the background of an image. The computeConnectedComponentLabeling function is called which given 
+					the altered image finds pixels that are near each other and groups them together. Finally after all is done the program 
+					determines the largest group of pixels within the image as the QR code, returns all pixels outside of the group as black pixels 
+					and calculates the 4 corners of the square. A box is then drawn around the QR code with the corners being the same as the corners 
+					that were calculated before giving the final image shown above.
+				</p>
 				<br><br><a class="code-link" href="https://github.com/ChristianJWhite/QR_Code/blob/main/QR%20Code%20Detector/QRCodeDetection.py">View code</a>
 			</div>
 		</div>
@@ -160,7 +186,7 @@
 	
 </div>
 
-
+<!-- Project 2 Webpage -->
 <div id="showProject2">
 	<div id="container" class="cols">
 		<div class="box">
@@ -233,7 +259,7 @@
 	</div>
 </div>
 
-
+<!-- Project 3 Webpage -->
 <div id="showProject3">
 	<div id="container" class="cols">
 		<div class="box">
@@ -282,7 +308,58 @@
 </div>
 
 
-
+<!-- Project 4 Webpage -->
+<div id="showProject4">
+	<div id="container-project4" class="cols">
+		<div class="box">
+			<div class="col-container-project4">
+				<h2>JavaScript Game</h2>
+				<div style="text-align: center;">
+					<iframe src="H:/Jobs/Showcase Website/Sprite Game/index.html" style=
+					"height:590px;
+					width:1040px;
+					border:none;" 
+					title="JavaScript Fighting Game"
+					scrolling="no">
+					</iframe>
+				</div>
+				<!-- Table with style that centers the table -->
+				<table style=" margin-left: auto; margin-right: auto;">
+					<tr>
+						<th></th>
+						<th>Player 1</th>
+						<th>Player 2</th>
+					</tr>
+					<tr>
+						<th>Move Left</th>
+						<td>A</td>
+						<td>Left Arrow</td>
+					</tr>
+					<tr>
+						<th>Move Right</th>
+						<td>D</td>
+						<td>Right Arrow</td>
+					</tr>
+					<tr>
+						<th>Jump</th>
+						<td>W</td>
+						<td>Up Arrow</td>
+					</tr>
+					<tr>
+						<th>Attack</th>
+						<td>Space Bar</td>
+						<td>Enter</td>
+					</tr>
+				</table>
+				<br>
+				<div>  
+					<a class="code-link" href="https://github.com/ChristianJWhite/fighting_game/tree/main/Sprite%20Game">View code</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
 
   
 <footer>
@@ -290,4 +367,5 @@
 </footer>
 
 </body>
+
 </html>
