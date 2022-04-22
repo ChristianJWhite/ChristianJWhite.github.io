@@ -14,7 +14,7 @@ const background = new Sprite({
         y:0
     },
     scale: 1,
-    imageSrc: './img/background.png',
+    imageSrc: 'img/background.png',
     framesMax: 1
 })
 
@@ -24,7 +24,7 @@ const shop = new Sprite({
         y:293
     },
     scale: 1.9,
-    imageSrc: './img/shop.png',
+    imageSrc: 'img/shop.png',
     framesMax: 6
 })
 
