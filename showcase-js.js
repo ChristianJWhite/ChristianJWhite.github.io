@@ -36,6 +36,7 @@ function showSlides(n) {
 }
 
 
+
 const myProjects = () => {
   document.getElementById("myProjects").style.display = "block";
   document.getElementById("showProject1").style.display = "none";

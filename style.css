@@ -7,11 +7,6 @@ body {
 	padding: 0;
 }
 
-.project-feature img {
-	width:60%;
-	height:300px;
-}
-
 
 h2 {
 	color: rgb(0, 125, 188);
@@ -132,6 +127,10 @@ a {
 	padding: 40px;
 }
 
+.col-container-project4 {
+	padding: 10px;
+}
+
 
 .column-half{
 	margin: 20px;
@@ -186,9 +185,33 @@ a {
 	width: 300px;
 }
 
+/* Project Buttons in main page */
 .project-feature {
 	margin-top: 20px;
 	margin-bottom: 20px;
+	height: 400px
+}
+
+.project-feature-2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 400px
+}
+
+.project-feature img {
+	width:60%;
+	
+}
+
+.project-feature-2 img {
+	width:90%;
+	
+}
+
+.p1 {
+	color:rgb(0, 125, 188);
+	font-weight: 400;
+	font-size: 30px;
 }
 
 
@@ -196,6 +219,11 @@ a {
 #container {
 	width: 90%;
     margin: 4em auto;
+}
+
+#container-project4 {
+	width: 90%;
+    margin: 1em auto;
 }
 
 .cols {
@@ -378,6 +406,21 @@ div.polaroid {
 	to {opacity: 1}
 } 
 
+
+/* Table */
+td, th {
+	width: 8rem;
+	height: 2rem;
+	border: 1px solid #ccc;
+	text-align: center;
+  }
+th {
+	background: lightblue;
+	border-color: white;
+}
+body {
+	padding: 1rem;
+}
 
 
 footer { 
