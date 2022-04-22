@@ -44,64 +44,64 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: './img/Knight/KnightIdle_strip.png',
+    imageSrc: 'img/Knight/KnightIdle_strip.png',
     framesMax: 15,
     scale: 3 ,
     sprites: {
         idle:{
-            imageSrc: './img/Knight/KnightIdle_strip.png',
+            imageSrc: 'img/Knight/KnightIdle_strip.png',
             framesMax: 15
         },
         idleLeft:{
-            imageSrc: './img/Knight/KnightIdleLeft.png',
+            imageSrc: 'img/Knight/KnightIdleLeft.png',
             framesMax: 15
         },
         run:{
-            imageSrc: './img/Knight/noBKG_KnightRun_strip.png',
+            imageSrc: 'img/Knight/noBKG_KnightRun_strip.png',
             framesMax: 8
         },
         runLeft:{
-            imageSrc: './img/Knight/KnightRunLeft.png',
+            imageSrc: 'img/Knight/KnightRunLeft.png',
             framesMax: 8
         },
         jump:{
-            imageSrc: './img/Knight/KnightJumpUp.png',
+            imageSrc: 'img/Knight/KnightJumpUp.png',
             framesMax: 4
         },
         jumpLeft:{
-            imageSrc: './img/Knight/KnightJumpUpLeft.png',
+            imageSrc: 'img/Knight/KnightJumpUpLeft.png',
             framesMax: 4
         },
         fall:{
-            imageSrc: './img/Knight/KnightFall.png',
+            imageSrc: 'img/Knight/KnightFall.png',
             framesMax: 4
         },
         fallLeft:{
-            imageSrc: './img/Knight/KnightFallLeft.png',
+            imageSrc: 'img/Knight/KnightFallLeft.png',
             framesMax: 4
         },
         attack:{
-            imageSrc: './img/Knight/KnightAttack.png',
+            imageSrc: 'img/Knight/KnightAttack.png',
             framesMax: 6
         },
         attackLeft:{
-            imageSrc: './img/Knight/KnightAttackLeft.png',
+            imageSrc: 'img/Knight/KnightAttackLeft.png',
             framesMax: 6
         },
         takeHit:{
-            imageSrc: './img/Knight/KnightHitRight.png',
+            imageSrc: 'img/Knight/KnightHitRight.png',
             framesMax: 4
         },
         takeHitLeft:{
-            imageSrc: './img/Knight/KnightHitLeft.png',
+            imageSrc: 'img/Knight/KnightHitLeft.png',
            framesMax: 4
         },
         death:{
-            imageSrc: './img/Knight/KnightDeath.png',
+            imageSrc: 'img/Knight/KnightDeath.png',
            framesMax: 8
         },
         deathLeft:{
-            imageSrc: './img/Knight/KnightDeathLeft.png',
+            imageSrc: 'img/Knight/KnightDeathLeft.png',
            framesMax: 8
         }
         
@@ -121,64 +121,64 @@ const enemy = new Fighter({
         x: -50,
         y: 0
     },
-    imageSrc: './img/Knight2/KnightIdleLeftBlue.png',
+    imageSrc: 'img/Knight2/KnightIdleLeftBlue.png',
     framesMax: 15,
     scale: 3 ,
     sprites: {
         idle:{
-            imageSrc: './img/Knight2/KnightIdleBlue.png',
+            imageSrc: 'img/Knight2/KnightIdleBlue.png',
             framesMax: 15
         },
         idleLeft:{
-            imageSrc: './img/Knight2/KnightIdleLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightIdleLeftBlue.png',
             framesMax: 15
         },
         run:{
-            imageSrc: './img/Knight2/KnightRunBlue.png',
+            imageSrc: 'img/Knight2/KnightRunBlue.png',
             framesMax: 8
         },
         runLeft:{
-            imageSrc: './img/Knight2/KnightRunLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightRunLeftBlue.png',
             framesMax: 8
         },
         jump:{
-            imageSrc: './img/Knight2/KnightJumpUpBlue.png',
+            imageSrc: 'img/Knight2/KnightJumpUpBlue.png',
             framesMax: 4
         },
         jumpLeft:{
-            imageSrc: './img/Knight2/KnightJumpUpLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightJumpUpLeftBlue.png',
             framesMax: 4
         },
         fall:{
-            imageSrc: './img/Knight2/KnightFallBlue.png',
+            imageSrc: 'img/Knight2/KnightFallBlue.png',
             framesMax: 4
         },
         fallLeft:{
-            imageSrc: './img/Knight2/KnightFallLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightFallLeftBlue.png',
             framesMax: 4
         },
         attack:{
-            imageSrc: './img/Knight2/KnightAttackBlue.png',
+            imageSrc: 'img/Knight2/KnightAttackBlue.png',
             framesMax: 6
         },
         attackLeft:{
-            imageSrc: './img/Knight2/KnightAttackLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightAttackLeftBlue.png',
             framesMax: 6
         },
         takeHit:{
-            imageSrc: './img/Knight2/KnightHitRightBlue.png',
+            imageSrc: 'img/Knight2/KnightHitRightBlue.png',
             framesMax: 4
         },
         takeHitLeft:{
-            imageSrc: './img/Knight2/KnightHitLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightHitLeftBlue.png',
            framesMax: 4
         },
         death:{
-            imageSrc: './img/Knight2/KnightDeathBlue.png',
+            imageSrc: 'img/Knight2/KnightDeathBlue.png',
            framesMax: 8
         },
         deathLeft:{
-            imageSrc: './img/Knight2/KnightDeathLeftBlue.png',
+            imageSrc: 'img/Knight2/KnightDeathLeftBlue.png',
            framesMax: 8
         }
     } 
