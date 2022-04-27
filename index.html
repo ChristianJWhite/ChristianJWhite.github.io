@@ -107,7 +107,7 @@
 					<div class="mySlides fade">
 						<div class="numbertext">2 / 6</div>
 						<img src="bloomfield-pixel-array.PNG" style="width:100%">
-						<div class="text">QR code after being greyscaled</div>
+						<div class="text">QR code after edges being identified and being greyscaled</div>
 					</div>
 				
 					<div class="mySlides fade">
@@ -133,7 +133,7 @@
 
 					<div class="mySlides fade">
 						<div class="numbertext">6 / 6</div>
-						<img src="bloomfield-after.png" style="width:100%">
+						<img src="bloomfield-after.PNG" style="width:100%">
 						<div class="text">QR code with identification</div>
 					</div>
 				
@@ -156,7 +156,7 @@
 				<p style="margin-left: 10px; margin-right: 10px; text-align:left">
 					I created a python software that detects QR codes in images, a technology that is used daily 
 					when scanning QR codes with the COVID19 tracer app. The steps I did to achieve this
-					result can be seen in the above example images.
+					result can be seen in the above example images. <br><br>
 
 					In order to create the QR code detector the program would read in the png file, and receive three pixel arrays for red, 
 					green and blue components, respectively. Each pixel array contains 8 bit integer values between 0 and 255 
@@ -309,19 +309,55 @@
 
 
 <!-- Project 4 Webpage -->
-<div id="showProject4">
+<div id="showProject4" >
+	
+</style>>
 	<div id="container-project4" class="cols">
 		<div class="box">
 			<div class="col-container-project4">
 				<h2>JavaScript Game</h2>
 				<div style="text-align: center;">
-					<iframe src="Sprite Game/index.html" style=
-					"height:590px;
-					width:1040px;
-					border:none;" 
-					title="JavaScript Fighting Game"
-					scrolling="no">
-					</iframe>
+					<!-- div for the game screen -->
+					<div style="position: relative; display: inline-block; box-sizing: border-box;
+					font-family: 'Press Start 2P', cursive; ">
+
+						<!-- div for the health bar and timer -->
+						<div style="position:absolute; display: flex; width:100%; align-items: center; padding: 20px;">
+							<!-- player health -->
+							<div style="position:relative; width: 100%; display:flex; justify-content: flex-end; border-top:4px solid white; border-bottom:4px solid white; border-left:4px solid white">
+								<div style="background-color:red; height:30px; width:100%"></div>
+								<div id="playerHealth" style='position:absolute; background:#6366f1; top: 0; right:0; bottom: 0; width:100%'></div>
+							</div>
+							<!-- timer -->
+							<div id="timer" style="background-color:#1e3a8a; height:50px; width: 100px; flex-shrink: 0; display:flex; align-items: center; justify-content: center; color: white; border:4px solid white">
+								10
+							</div>
+							<!-- enemy health -->
+							<div style="position:relative; width: 100%; border-top:4px solid white; border-bottom:4px solid white; border-right:4px solid white">
+								<div style="background-color:red; height:30px"></div>
+								<div id="enemyHealth" style='position:absolute; background:#6366f1; top: 0; right:0; bottom: 0; left:0'></div>
+							</div>
+						</div>
+						
+						<!-- div for the winner message -->
+						<div 
+						id="displayWinner"
+						style="
+						position:absolute; 
+						color: white; 
+						align-items: center; 
+						justify-content: center; 
+						top:0; 
+						right:0; 
+						bottom:0; 
+						left:0; 
+						display: none">
+							Tie
+						</div>
+
+						<canvas></canvas>
+					</div>
+
 				</div>
 				<!-- Table with style that centers the table -->
 				<table style=" margin-left: auto; margin-right: auto;">
@@ -374,7 +410,7 @@
 </script>
 <script src="Sprite Game/js/utilities.js"></script>
 <script src="Sprite Game/js/classes.js"></script>
-<script src="Sprite Game/js/gameIndex.js"></script>
+<script src="Sprite Game/gameIndex.js"></script>
 
 </body>
 
