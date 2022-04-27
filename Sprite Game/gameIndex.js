@@ -14,7 +14,7 @@ const background = new Sprite({
         y:0
     },
     scale: 1,
-    imageSrc: 'Sprite Game/img/background.png',
+    imageSrc: 'Sprite Game/img/Background.png',
     framesMax: 1
 })
 
