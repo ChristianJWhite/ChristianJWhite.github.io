@@ -154,7 +154,7 @@ const enemy = new Fighter({
             framesMax: 4
         },
         fallLeft:{
-            imageSrc: 'Sprite Game/Sprite Game/img/Knight2/KnightFallLeftBlue.png',
+            imageSrc: 'Sprite Game/img/Knight2/KnightFallLeftBlue.png',
             framesMax: 4
         },
         attack:{
